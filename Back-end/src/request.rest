@@ -1,0 +1,83 @@
+GET http://localhost:8000/users
+
+### 
+
+POST http://localhost:8000/buses HTTP/1.1
+content-type: application/json
+
+{
+    "busTypeName":"SEABIRD TOURISTS",
+    "travelerAgentName":"AC Sleeper (2 + 1)",
+    "rating":"3.9",
+    "totalRating":"1k",
+    "startTime":"21:30",
+    "arrivalTime":"11:00",
+    "travelTime":"13.30",
+    "discount":"2",
+    "price":1200,
+    "availableSeats":27,
+    "available":true,
+    "AC":true,
+    "NonAC":false,
+    "Volvo":true,
+    "Seater":true,
+    "Sleeper":true,
+    "cancelPolicy":true
+}
+
+
+###
+GET http://localhost:8000/buses
+
+//Sorting price
+###
+GET http://localhost:8000/buses/price
+
+###
+GET http://localhost:8000/buses/rating
+
+###
+GET http://localhost:8000/buses/seats
+
+###
+GET http://localhost:8000/buses/departuretime
+
+###
+GET http://localhost:8000/buses/arrivaltime
+
+
+###
+POST  http://localhost:8000/routes  HTTP/1.1
+content-type: application/json
+
+{
+    "departureLocation":"Bangalore",
+    "arrivalLocation":"Goa",
+    "journeyDate":"2021-07-26",
+    "boardingPoints":["Indiranagar","HSR Layout","KR Puram","Tin Factory"],
+    "droppingPoint":["Canacona","Mapsa","Margoa","PANJIM"],
+    "buses":["60f97a63784b2736dcb4e971","60f97ac4784b2736dcb4e972","60f97c2b784b2736dcb4e974","60f97cbf784b2736dcb4e975"]
+}
+
+
+###
+GET http://localhost:8000/routes/services/?from=Bangalore&&to=Goa&&date=2021-07-26
+
+###
+GET http://localhost:8000/routes
+
+###
+POST http://localhost:8000/passengers  HTTP/1.1
+content-type: application/json
+
+{
+    "email":"obul123@gmail.com",
+    "mobile":97812716123,
+    "emergency_Contact":1978269234,
+    "name":"obul321",
+    "age":25,
+    "gender":"Male"
+}
+
+###
+GET http://localhost:8000/passengers

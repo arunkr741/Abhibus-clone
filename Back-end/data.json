@@ -1,0 +1,26 @@
+[
+	{
+		"depart_from": "kolkata",
+		"going_to": "Delhi",
+		"owned_company": "Masai Benz Travels Pvt Ltd.",
+		"departure_time": "4:30",
+		"departure_half": "PM",
+		"departure_type": "Before 6 am",
+		"total_duration": "38:15",
+		"arrival_time": "6:45",
+		"arrival_type": "After 6 pm",
+		"arrival_half": "AM",
+		"bus_type": ["Sleeper", "AC"],
+		"price_per_person": 3500,
+		"seat_capacity": 60,
+		"lower_deck": 40,
+		"upper_deck": 20,
+		"available": true,
+		"boarding_points": "city_name_id"
+	},
+
+	{
+		"city_name": "Hyderabad",
+		"junctions": ["ammerpet", "nothing"]
+	}
+]
